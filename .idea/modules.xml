@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ch01-hello-spring/ch01-hello-spring.iml" filepath="$PROJECT_DIR$/ch01-hello-spring/ch01-hello-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch02-di-xml/ch02-di-xml.iml" filepath="$PROJECT_DIR$/ch02-di-xml/ch02-di-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chr03-spring-homewrok/chr03-spring-homewrok.iml" filepath="$PROJECT_DIR$/chr03-spring-homewrok/chr03-spring-homewrok.iml" />
+    </modules>
+  </component>
+</project>

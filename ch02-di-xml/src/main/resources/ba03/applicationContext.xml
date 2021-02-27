@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--构造注入
+        spring调用类有参数构造方法，在创建对象的同时，
+        在构造方法中给属性赋值。
+        构造注入使用<constructor-arg>标签
+        一个<constructor-arg>标签表示构造方法的一个参数
+    -->
+    <bean id="myStudent" class="com.dlkyy.ba03.Student">
+        <constructor-arg name="myname" value="dd"/>
+        <constructor-arg name="myage" value="16"/>
+        <constructor-arg name="myschool" ref="mySchool"/>
+    </bean>
+    <!--School对象-->
+    <bean id="mySchool" class="com.dlkyy.ba03.School">
+        <property name="name" value="动力节点"/>
+        <property name="address" value="北京"/>
+    </bean>
+
+    <!--创建File，使用构造注入-->
+    <bean id="myFile" class="java.io.File">
+        <constructor-arg name="parent" value="I:\spring-project\ch01-hello-spring"/>
+        <constructor-arg name="child" value="readme.txt"/>
+    </bean>
+</beans>

@@ -1,0 +1,4 @@
+# Project exclude paths
+/ch01-hello-spring/target/
+/ch02-di-xml/target/
+/chr03-spring-homewrok/target/
