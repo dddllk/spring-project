@@ -6,15 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ch04-di-anno" />
         <module name="ch02-di-xml" />
         <module name="ch01-hello-spring" />
-        <module name="chr03-spring-homewrok" />
+      </profile>
+      <profile name="Annotation profile for chr03-spring-homewrok" enabled="true">
+        <sourceOutputDir name="../chr03-spring-homewrok/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../chr03-spring-homewrok/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch03-spring-homewrok" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ch01-hello-spring" target="1.8" />
       <module name="ch02-di-xml" target="1.8" />
-      <module name="chr03-spring-homewrok" target="1.8" />
+      <module name="ch03-spring-homewrok" target="1.8" />
+      <module name="ch04-di-anno" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
