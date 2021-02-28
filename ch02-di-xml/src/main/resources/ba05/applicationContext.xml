@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myStudent" class="com.dlkyy.ba05.Student" autowire="byType">
+        <property name="name" value="dd"/>
+        <property name="age" value="16"/>
+        <!--引用类型-->
+        <!--<property name="school" ref="mySchool"/>-->
+    </bean>
+<!--    <bean id="mySchool" class="com.dlkyy.ba05.School">-->
+<!--        <property name="name" value="powernode"/>-->
+<!--        <property name="address" value="bj"/>-->
+<!--    </bean>-->
+    <!--School的子类-->
+    <bean id="middleSchool" class="com.dlkyy.ba05.MiddleSchool">
+        <property name="name" value="夹滩小学"/>
+        <property name="address" value="重庆"/>
+    </bean>
+</beans>
+
+<!--byType
+    (按类型注入)：java类中引用类型的数据类型和spring容器中（配置文件）
+                <bean>的class属性是同源关系的，这样的bean能够赋值非引用类型
+        同源关系是指：
+            1.java类中引用类型的数据类型和bean的class的值是一样的。
+            2.java类中引用类型的数据类型和bean的class的值是父子关系的
+            3.java类中引用类型的数据类型和bean的class的值是接口和实现类关系的
+
+   注意：在byType中，在xml配置文件中声明bean只能有一个符合条件的，
+         多余一个是错误的~
+-->
