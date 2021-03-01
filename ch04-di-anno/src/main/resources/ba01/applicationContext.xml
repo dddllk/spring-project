@@ -12,5 +12,8 @@
         component-scan工作方式：spring会扫描遍历base-package指定的包
         把包中和子包中的所有类，找到类中的注解，按照注解的功能创建对象，给属性赋值
     -->
-    <context:component-scan base-package="com.dlkyy.ba06"/>
+    <context:component-scan base-package="com.dlkyy.ba07"/>
+
+    <!--加载属性配置文件，并设置编码格式-->
+    <context:property-placeholder location="classpath:ba01/test.properties" file-encoding="GBK"/>
 </beans>
