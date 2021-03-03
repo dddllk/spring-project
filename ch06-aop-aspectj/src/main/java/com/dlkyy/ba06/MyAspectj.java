@@ -33,7 +33,7 @@ public class MyAspectj {
    *   其他通知中，value属性就可以使用这个方法名称，代替切入点表达式了
    */
   @Pointcut(value = "execution(* *..SomeServiceImpl.doThird(..))")
-  public void mypt(){
+  private void mypt(){
     // 无须代码
   }
 }
