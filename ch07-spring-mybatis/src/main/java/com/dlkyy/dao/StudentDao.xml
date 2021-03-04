@@ -5,7 +5,7 @@
 <mapper namespace="com.dlkyy.dao.StudentDao">
     <!--插入-->
     <insert id="insertStudent">
-        insert into student values(#{id}, #{name}, #{email}, #{ager})
+        insert into student values(#{id}, #{name}, #{email}, #{age})
     </insert>
     <!--查询-->
     <select id="selectStudents" resultType="com.dlkyy.entity.Student">

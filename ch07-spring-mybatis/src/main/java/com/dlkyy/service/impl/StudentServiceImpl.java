@@ -13,6 +13,7 @@ public class StudentServiceImpl implements StudentService {
   // 引用类型
   private StudentDao studentDao;
 
+  // set 注入
   public void setStudentDao(StudentDao studentDao) {
     this.studentDao = studentDao;
   }
