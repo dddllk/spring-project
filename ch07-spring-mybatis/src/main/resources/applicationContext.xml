@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+   <!--
+        把数据库的配置信息，写在一个独立的文件，编译修改数据库的配置内容
+        spring知道db.properties的位置
+
+        使用属性配置文件中的数据，语法${key}
+   -->
+    <context:property-placeholder location="classpath:db.properties"/>
+
     <!--声明数据源，作用是连接数据库的-->
     <bean id="myDataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
         <!--set注入给DruidDataSource提供连接数据库信息-->
-        <property name="url" value="jdbc:mysql://localhost:3309/bjpowernode"/><!--setUrl()-->
-        <property name="username" value="root"/>
-        <property name="password" value="123456"/>
-        <property name="maxActive" value="20"/>
+        <property name="url" value="${db.url}"/><!--setUrl()-->
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+        <property name="maxActive" value="${db.max}"/>
     </bean>
 
     <!--声明的是mybatis中提供的SqlSessionFactoryBean类，这个类内存创建SqlSessionFactory的-->
