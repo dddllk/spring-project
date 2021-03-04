@@ -37,13 +37,14 @@
 
      <!--创建dao对象，使用SqlSessionFactory的getMapper(studentDao.class)
         MapperScannerConfigurer：在内部调用getMapper()生成每个dao接口的代理对象。
+        创建好的dao对象放入到spring容器中，到对象的默认名称是：接口首字母小写。
      -->
      <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--指定SqlSessionFactory对象的id-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!--指定包名，包名是到接口所在的包名。
             MapperScannerConfigurer会扫描这个包中的所有接口，把每个接口都执行
-            一次getMapper()方法，得到每个接口的到对象。
+            一次getMapper()方法，得到每个接口的dao对象。
             创建好的dao对象放入到spring容器中
         -->
          <property name="basePackage" value="com.dlkyy.dao"/>
