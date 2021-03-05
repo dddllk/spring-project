@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ch08-spring-trans" />
         <module name="ch04-di-anno" />
         <module name="ch06-aop-aspectj" />
-        <module name="ch05-aop-leadin" />
         <module name="ch07-spring-mybatis" />
         <module name="ch02-di-xml" />
         <module name="ch01-hello-spring" />
+        <module name="ch05-aop-leadin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="ch05-aop-leadin" target="1.8" />
       <module name="ch06-aop-aspectj" target="1.8" />
       <module name="ch07-spring-mybatis" target="1.8" />
+      <module name="ch08-spring-trans" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
